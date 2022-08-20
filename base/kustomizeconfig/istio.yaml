@@ -1,0 +1,11 @@
+nameReference:
+  - kind: Service
+    version: v1
+    fieldSpecs:
+      - path: spec/http/route/destination/host
+        kind: VirtualService
+  - kind: Service
+    version: v1
+    fieldSpecs:
+      - path: spec/host
+        kind: DestinationRule

@@ -1,0 +1,22 @@
+namePrefix: rkm-deus-
+
+resources:
+  - git@github.com:Fablic/kustomize-base/?ref=main
+  - main.yaml
+  - service.yaml
+  - virtual-service.yaml
+
+configMapGenerator:
+  - name: env-vault
+    envs:
+      - files/deus/env
+    options:
+      annotations:
+        argocd.argoproj.io/hook: PreSync
+
+secretGenerator:
+  - name: gcp-credentials
+  - name: env-credentials
+
+configurations:
+  - kustomizeconfig/istio.yaml
