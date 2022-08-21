@@ -1,4 +1,4 @@
-namePrefix: rkm-deus-
+namePrefix: rkm-kiyos-
 
 resources:
   - git@github.com:Fablic/kustomize-base/?ref=main
@@ -9,7 +9,7 @@ resources:
 configMapGenerator:
   - name: env-vault
     envs:
-      - files/deus/env
+      - files/kiyos/env
     options:
       annotations:
         argocd.argoproj.io/hook: PreSync

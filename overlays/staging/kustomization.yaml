@@ -1,0 +1,24 @@
+namespace: ki-staging
+bases:
+  - ../../base
+secretGenerator:
+  - name: env-credentials
+    behavior: merge
+    envs:
+      - ../../base/files/kiyos-credential/envs/kiyos/staging/.env
+  - name: gcp-credentilas
+    behavior: replace
+    files:
+      - gcp-firebase-serviceaccount.json=../../base/files/kiyos-credentials/files/gcp/staging/gcp-firebase-serviceaccount.json
+configMapgenerator:
+  - name: env-bolt
+    behavior: merge
+    envs:
+      - files/kiyos/env
+patches:
+  - main-patch.yaml
+  - virtual-service-patch.yaml
+images:
+  - name: ki-kiyos
+    newName: 647974632916.dkr.ecr.ap-northeast-1.amazonaws.com/kiyos
+    newTag: DUMMY
