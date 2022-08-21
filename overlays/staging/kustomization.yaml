@@ -19,6 +19,6 @@ patches:
   - main-patch.yaml
   - virtual-service-patch.yaml
 images:
-  - name: ki-kiyos
+  - name: kiyos
     newName: 647974632916.dkr.ecr.ap-northeast-1.amazonaws.com/kiyos
     newTag: DUMMY
