@@ -1,0 +1,3 @@
+[submodule "base/ki-kiyos-credential"]
+	path = base/ki-kiyos-credential
+	url = git@gitlab.com:akakiyo/ki-kiyos-credential.git

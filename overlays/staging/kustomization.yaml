@@ -5,11 +5,11 @@ secretGenerator:
   - name: env-credentials
     behavior: merge
     envs:
-      - ../../base/files/kiyos-credential/envs/kiyos/staging/.env
+      - ../../base/files/ki-kiyos-credential/envs/kiyos/staging/.env
   - name: gcp-credentilas
     behavior: replace
     files:
-      - gcp-firebase-serviceaccount.json=../../base/files/kiyos-credentials/files/gcp/staging/gcp-firebase-serviceaccount.json
+      - gcp-firebase-serviceaccount.json=../../base/files/ki-kiyos-credentials/files/gcp/staging/gcp-firebase-serviceaccount.json
 configMapgenerator:
   - name: env-bolt
     behavior: merge
