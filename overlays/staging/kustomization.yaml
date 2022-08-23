@@ -21,4 +21,4 @@ patches:
 images:
   - name: kiyos
     newName: 647974632916.dkr.ecr.ap-northeast-1.amazonaws.com/kiyos
-    newTag: main-506a42f
+    newTag: main-1023346
